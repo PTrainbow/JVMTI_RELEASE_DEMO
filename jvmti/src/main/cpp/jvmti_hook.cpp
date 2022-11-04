@@ -22,9 +22,6 @@ Agent_OnAttach(JavaVM *vm, char *options, void *reserved) {
         LOGI("attach jvmti agent failed!");
         return result;
     }
-    jvmtiCapabilities caps;
-    sJVMTIEnv->GetPotentialCapabilities(&caps);
-    sJVMTIEnv->AddCapabilities(&caps);
     return JNI_OK;
 }
 
