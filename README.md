@@ -5,6 +5,11 @@
 大部分借鉴 https://juejin.cn/post/6942782366993612813 这篇文章
 
 核心是调用 libart.so 的 SetJdwpAllowed() setJavaDebuggable() 方法，来突破限制
+***
+**注意**
+SetJdwpAllowed() setJavaDebuggable() 这俩方法不要修改，会有安全风险
+
+可以直接手动加载一些 so
 
 ## 如何调用 so 私有方法
 
